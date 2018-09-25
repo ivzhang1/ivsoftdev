@@ -15,7 +15,7 @@
   {% for occ in occ_dictionary.keys() %}
   <tr>
   	<td>{{occ}}</td>
-  	<td>{{occ_dictionary[occ][0]}}</td>
+  	<td>{{occ_dictionary[occ][0] * 100}}</td>
   	<td><a href = {{occ_dictionary[occ][1]}}> {{occ_dictionary[occ][1]}} </a></td>
   </tr>
   {% endfor %}
