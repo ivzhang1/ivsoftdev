@@ -1,10 +1,10 @@
 from random import random
 
 # Returns a dictionary in the following manner: {"OCCUPATION_1":PERCENTAGE_1,"OCCUPATION_2":PERCENTAGE_2,...}
-def makeOccupationDict():
+def makeOccupationDict(filename):
 	new_dict = {}
 
-	f = open("../data/occupations.csv", "r") # Opens file for reading
+	f = open(filename, "r") # Opens file for reading
 
 	for line in f.readlines(): # f.readlines() returns a list of lines
 
@@ -24,15 +24,13 @@ def makeOccupationDict():
 
 	return new_dict
 
-occupation_dict = makeOccupationDict() # Gets an dictionary occupation and their respective percentages
-
-# Selects a random occupation
-def selectRandom():
+# Selects a random occupation given a filename with occupations and percentages
+def selectRandom(filename):
 	rand_decimal = random() # Random decimals from 0 to 1
 
 	while(rand_decimal >= .998): # rand_decimal CANNOT BE .998 because occupational percentages add up to 99.8 rather than 100 (see 'occupations.csv')
 		rand_decimal = random() # Keep randomizing until rand_decimal is less than .998
-
+	occupation_dict = makeOccupationDict(filename)
 	for key in occupation_dict.keys():
 		
 		rand_decimal -= occupation_dict[key][0] # Subtract the decimal from rand_decimal

@@ -11,9 +11,9 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/occupations")
 def occupations():
-    occupation_dict = util.makeOccupationDict()
-    
-	 return render_template("occupations.html", random_occ = util.selectRandom(), occ_dictionary = occupation_dict)
+	occupation_dict = random_occ.makeOccupationDict("data/occupations.csv") # returns an occupations dictionary
+	random_occupation  = random_occ.selectRandom("data/occupations.csv") # returns a random occupation
+	return render_template("occupations.html", random_occ = random_occupation, occ_dictionary = occupation_dict)
 
 if __name__ == "__main__":
 	app.debug = True
