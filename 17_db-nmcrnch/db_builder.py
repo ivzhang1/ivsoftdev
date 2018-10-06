@@ -1,8 +1,3 @@
-#HYPERS - Ivan Zhang and Jerry Ye
-#SoftDev1 pd7
-#SQLITE3 BASICS
-#2018-10-04
-
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitates CSV I/O
 
