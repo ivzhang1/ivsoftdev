@@ -1,13 +1,13 @@
 <!doctype html>
 
 <!--
-label (media) ivan
-callout (containers) ivan
-top bar (navigation) theodore
-button (controls) theodore
-float classes (utilities) ivan
-grid xy (general) theodore 
--->
+    label (media) ivan
+    callout (containers) ivan
+    top bar (navigation) theodore
+    button (controls) theodore
+    float classes (utilities) ivan
+    grid xy (general) theodore 
+  -->
 
 <html>
   <head>
@@ -15,45 +15,82 @@ grid xy (general) theodore
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0-rc.4/css/foundation.css">
   </head>
   <body>
-	<h1>Foundation:</h1>
-	<h2>Labels</h2>
-	<span class="label primary">Primary Label</span>
-	<span class="label secondary">Secondary Label</span>
-	<span class="label success">Success Label</span>
-	<span class="label alert">Alert Label</span>
-	<span class="label warning">Warning Label</span>
-	<br>
-	<ul> 
-		<li> Customized labels with different colors</li>
+    <div class="top-bar" id="topbar-demo"><div class="top-bar-left">
+	<ul class="menu">
+	  <li class="menu-text">Some nifty foundation features:</li>
+	  <li><a href="#topbar-demo">topbar</a></li>
+	  <li><a href="#label-demo">labels</a></li>
+	  <li><a href="#callout-demo">callouts</a></li>
+	  <li><a href="#float-demo">floats</a></li>
+	  <li><a href="#button-demo">buttons</a></li>
+	  <li><a href="#grid-demo">grids</a></li>
 	</ul>
-	<br>
-	<br>
-	<h2>Callouts</h2>
+    </div></div> 
+    <h2 id="label-demo">Labels</h2>
+    <span class="label primary">Primary Label</span>
+    <span class="label secondary">Secondary Label</span>
+    <span class="label success">Success Label</span>
+    <span class="label alert">Alert Label</span>
+    <span class="label warning">Warning Label</span>
+    <br>
+    <ul>
+      <li> Customized labels with different colors</li>
+    </ul>
+    <br>
+    <br>
+    <h2 id="callout-demo">Callouts</h2>
+    <div class="callout">
+      <h5>This is a callout</h5>
+      <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      <a href="#topbar-demo">It's dangerous to go alone, take this.</a>
+    </div>
+    <div class="callout success">
+      <h5>This is a secondary callout</h5>
+      <p>Yadda yadda but in green.</p>
+      <a href="#topbar-demo">It's dangerous to go alone, take this.</a>
+    </div>
+    <br>
+    <ul>
+      <li> Customized callouts with different colors</li>
+    </ul>
+    <br>
+    <br>
+    <h2 id="float-demo">Float Classes</h2>
+    <div class="callout clearfix">
+      <a class="button float-left">Left</a>
+      <a class="button float-right">Right</a>
+    </div>
+    <br>
+    <ul>
+      <li> Customized float classes with different colors</li>
+    </ul>
 
-	<div class="callout">
-	  <h5>This is a secondary callout</h5>
-	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-	  <a href="#">It's dangerous to go alone, take this.</a>
-	</div>
-	<div class="callout success">
-	  <h5>This is a secondary callout</h5>
-	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
-	  <a href="#">It's dangerous to go alone, take this.</a>
-	</div>
-	<br>
-	<ul> 
-		<li> Customized callouts with different colors</li>
-	</ul>
-	<br>
-	<br>
-	<h2>Float Classes</h2>
-	<div class="callout clearfix">
-		<a class="button float-left">Left</a>
-		<a class="button float-right">Right</a>
-	</div>
-	<br>
-	<ul> 
-		<li> Customized float classes with different colors</li>
-	</ul>
+    <h2 id="button-demo">Buttons</h2>
+    <h5>link buttons:</h5>
+    <a href="#topbar-demo" class="button">Return to top of page</a>
+    <a href="https://discord.gg/QMGM4tu" class="warning button">Join the computer interaction club discord server</a>
+    <h5>action buttons (not hooked up to anything but they COULD be):</h5>
+
+    <button type="button" class="success button">green</button>
+    <button type="button" class="alert button">not green</button>
+    
+    <h2 id="grid-demo">Grids</h2>
+    <div class="grid-container fluid">
+      <div class="grid-x grid-margin-x grid-padding-x">
+	<div class="cell small-6"><div class="callout">easy to make custom</div></div>
+	<div class="cell small-4"><div class="callout">sized cells with</div></div>
+	<div class="cell small-2"><div class="callout">a grid!</div></div>
+      </div>
+      <div class="grid-x grid-margin-x grid-padding-x">
+	<div class="cell auto"><div class="callout">don't want to bother typing in cell sizes?</div></div>
+	<div class="cell auto"><div class="callout">these are auto sizing cells</div></div>
+	<div class="cell auto"><div class="callout">!!</div></div>
+      </div>
+      <div class="grid-x grid-margin-x grid-padding-x">
+	<div class="cell shrink"><div class="callout">??</div></div>
+	<div class="cell shrink"><div class="callout">to size based on text size rather than size of space, use shrink!</div></div>
+      </div>
+    </div>
+    
   </body>
 </html>
