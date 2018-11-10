@@ -1,7 +1,10 @@
 <!-- sublimeKittens : theodore peters && ivan zhang
-.
-.
-.                                                  -->
+Containers (Ivan, done)
+Buttons (Ivan, done)
+Jumbotrons (Ivan, done)
+Alerts (Theodore)
+Tables (Theodore)                                       -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +12,166 @@
         <title>Okay, now THIS is epic.</title>
     </head>
     <body>
-      
+      <h3>Using Bootstrap</h3>
+      To use the Bootstrap CDN, copy this into your HTML file:
+      <xmp style="background-color: lightgray">
+		<head>
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		</head>
+      </xmp>
+      Note: Resizing will resize the Bootstrap components (tres cool).
+      <br><br>
+      <h3>Containers</h3>
+      Bootstraps divides rows in 1-12 sections for containers. "col-sm" takes up 3 sections
+      <br><br>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					One of three columns
+				</div>
+				<div class="col-sm">
+					One of three columns
+				</div>
+				<div class="col-sm">
+					One of three columns
+				</div>
+			</div>
+		</div>
+	
+      <xmp style="background-color: lightgray">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					One of three columns
+				</div>
+			</div>
+		</div>
+      </xmp>
+    <br>
+    "col" creates columns of equal size
+    <br><br>
+		<div class="container">
+			<div class="row">
+				<div class="col">Column</div>
+				<div class="col">Column</div>
+				<div class="col">Column</div>
+				<div class="col">Column</div>
+			</div>
+		</div>
+	
+    <xmp style="background-color: lightgray">
+		<div class="container">
+			<div class="row">
+				<div class="col">Column</div>
+				<div class="col">Column</div>
+				<div class="col">Column</div>
+				<div class="col">Column</div>
+			</div>
+		</div>
+    </xmp>
+    <br>
+    Column sizes can be specified with "col-X" where X is an integer
+    <br><br>
+	<div class="container">
+			<div class="row">
+				<div class="col-6">Column</div>
+				<div class="col-4">Column</div>
+				<div class="col-1">Column</div>
+				<div class="col-1">Column</div>
+			</div>
+		</div>
+	
+    <xmp style="background-color: lightgray">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">Column</div>
+				<div class="col-4">Column</div>
+				<div class="col-1">Column</div>
+				<div class="col-1">Column</div>
+			</div>
+		</div>
+    </xmp>
+    <br>
+    <h3> Buttons </h3>
+    Bootstraps contains several different types of buttons. "btn btn-XXXXX" where XXXXX is the type of button.
+    <br>
+    Types:
+    <ul>
+    	<li>primary</li>
+    	<li>secondary</li>
+    	<li>success</li>
+    	<li>danger</li>
+    	<li>warning</li>
+    	<li>info</li>
+    	<li>light</li>
+    	<li>dark</li>
+    	<li>link</li>
+    </ul>
+      <br><br>
+		<div class="container">
+			<button type="button" class="btn btn-primary">Primary</button>
+			<button type="button" class="btn btn-secondary">Secondary</button>
+			<button type="button" class="btn btn-success">Success</button>
+			<button type="button" class="btn btn-danger">Danger</button>
+			<button type="button" class="btn btn-warning">Warning</button>
+			<button type="button" class="btn btn-info">Info</button>
+			<button type="button" class="btn btn-light">Light</button>
+			<button type="button" class="btn btn-dark">Dark</button>
+
+			<button type="button" class="btn btn-link">Link</button>
+		</div>
+	
+      <xmp style="background-color: lightgray">
+		<button type="button" class="btn btn-primary">Primary</button>
+		<button type="button" class="btn btn-secondary">Secondary</button>
+		<button type="button" class="btn btn-success">Success</button>
+		<button type="button" class="btn btn-danger">Danger</button>
+		<button type="button" class="btn btn-warning">Warning</button>
+		<button type="button" class="btn btn-info">Info</button>
+		<button type="button" class="btn btn-light">Light</button>
+		<button type="button" class="btn btn-dark">Dark</button>
+
+		<button type="button" class="btn btn-link">Link</button>
+      </xmp>
+    <br>
+    Buttons can also be used with other tags like &lt;a&gt; and &lt;input&gt;.
+       <br><br>
+		<a class="btn btn-primary" href="#" role="button">Link</a>
+		<button class="btn btn-primary" type="submit">Button</button>
+		<input class="btn btn-primary" type="button" value="Input">
+	
+      <xmp style="background-color: lightgray">
+		<a class="btn btn-primary" href="#" role="button">Link</a>
+		<button class="btn btn-primary" type="submit">Button</button>
+		<input class="btn btn-primary" type="button" value="Input">
+      </xmp>
+    <br>   
+    "btn btn-outline-XXXXX" does the same thing as "btn btn-XXXXX" but with an OUTLINE.
+	<br><br>
+		<div class="container">
+			<button type="button" class="btn btn-outline-primary">Primary</button>
+		</div>
+	
+      <xmp style="background-color: lightgray">
+		<button type="button" class="btn btn-outline-primary">Primary</button>
+      </xmp>
+    <br>
+    <h3>Jumbotrons</h3>
+	Jumbotrons take up the whole viewport to show key messages
+      <br><br>
+      <div class="jumbotron">
+			<h1>Hello, world!</h1>
+			<p>Simple Jumbotron</p>
+		</div>
+	
+      <xmp style="background-color: lightgray">
+      		<div class="jumbotron">
+				<h1>Hello, world!</h1>
+				<p>Simple Jumbotron</p>
+			</div>
+      </xmp>
+    <br>
+
+
     </body>
 </html>
