@@ -3,19 +3,19 @@
   
   <head>
 
-    <title>NASA REST!!!</title>
+    <title>STAR WARS REST!!!</title>
   </head>
   
   <body>
     
-    <h1>NASA REST API</h1>
+    <h1>STAR WARS REST API</h1>
     
 
     <p>
-    	<img src = {{url}}>
-
+    	{% for k,v in _d.items() %}
+        <h1> {{k}}: {{v}} </h1>
+      {% endfor %}
     	<br>
-    	{{desc}}
 
     </p>
     
