@@ -7,14 +7,16 @@
   </head>
   
   <body>
-    
+    <a href="{{url_for('got')}}"> Game of Throne </a>
+    <br>
+    <a href="{{url_for('meme')}}"> XKCD </a>    
     <h1>SLEEPY</h1>
     
 
     <p>
-      <h1> GOT Characters </h1>
+      <h1> COOL POKE STUFF </h1>
       {% for c in characters %}
-      <h2> Person </h2>
+      <h2> POKEMON </h2>
       <ul>
     	{% for k,v in c.items() %}
         <li> {{k}}: {{v}}</li>

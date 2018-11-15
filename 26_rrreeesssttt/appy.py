@@ -27,28 +27,25 @@ def got():
 
 @app.route("/poke")
 def poke():
-	url = "http://swapi.co/api/planets/{}/".format(str(r)) # URL WITH RANDOM INT
+	url = "https://api.pokemontcg.io/v1/cards/"
 	cri = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # SETS UP REQUEST
 	stuff = urllib.request.urlopen(cri, context=context) # GETS STUFF 
 	js = stuff.read() # gets info from urlopen
 	jason = json.loads(js) # loads into JSON
 	#print(jason)
 
-	return render_template("nasa.html", _d = jason)
-https://docs.google.com/document/d/1Dzcwh8tSxYQiXnEhezSDOa-iyqOWOfg-3iW45IiSvDo/edit#
+	return render_template("poke.html", characters = jason["cards"])
 
 @app.route("/memey")
-def ():
-	url = "http://swapi.co/api/planets/{}/".format(str(r)) # URL WITH RANDOM INT
-	cri = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # SETS UP REQUEST
-	stuff = urllib.request.urlopen(cri, context=context) # GETS STUFF 
+def meme():
+	url = "http://xkcd.com/{}/info.0.json".format(random.randrange(0,800))
+	stuff = urllib.request.urlopen(url, context=context) # GETS STUFF 
 	js = stuff.read() # gets info from urlopen
 	jason = json.loads(js) # loads into JSON
-	#print(jason)
+	print(jason)
 
-	return render_template("nasa.html", _d = jason)
+	return render_template("meme.html", _d = jason)
 
-https://docs.google.com/document/d/14C5iN-B-43ie3FoU4T3A1yThAA99MXyzcJTU7skDo98/edit
 if __name__ == "__main__":
 	app.debug = True
 	app.run()

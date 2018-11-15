@@ -7,21 +7,17 @@
   </head>
   
   <body>
-    
+    <a href="{{url_for('got')}}"> Game of Throne </a>
+        <br>
+
+    <a href="{{url_for('poke')}}"> Pokemon </a>
     <h1>SLEEPY</h1>
     
 
     <p>
-      <h1> GOT Characters </h1>
-      {% for c in characters %}
-      <h2> Person </h2>
-      <ul>
-    	{% for k,v in c.items() %}
-        <li> {{k}}: {{v}}</li>
-	{% endfor %}
-	</ul>
+      <h1> {{_d['safe_title']}} </h1>
       <br>
-      {% endfor %}
+      <img src = "{{_d['img']}}" alt = "{{_d['alt']}}">
 
     </p>
     
