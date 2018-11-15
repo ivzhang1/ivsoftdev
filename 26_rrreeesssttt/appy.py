@@ -35,9 +35,10 @@ def poke():
 	#print(jason)
 
 	return render_template("nasa.html", _d = jason)
+https://docs.google.com/document/d/1Dzcwh8tSxYQiXnEhezSDOa-iyqOWOfg-3iW45IiSvDo/edit#
 
 @app.route("/memey")
-def stars():
+def ():
 	url = "http://swapi.co/api/planets/{}/".format(str(r)) # URL WITH RANDOM INT
 	cri = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # SETS UP REQUEST
 	stuff = urllib.request.urlopen(cri, context=context) # GETS STUFF 
@@ -47,6 +48,7 @@ def stars():
 
 	return render_template("nasa.html", _d = jason)
 
+https://docs.google.com/document/d/14C5iN-B-43ie3FoU4T3A1yThAA99MXyzcJTU7skDo98/edit
 if __name__ == "__main__":
 	app.debug = True
 	app.run()
