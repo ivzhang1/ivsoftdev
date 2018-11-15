@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+
+    <title>RESTING!!!</title>
+  </head>
+  
+  <body>
+    
+    <h1>SLEEPY</h1>
+    
+
+    <p>
+      <h1> GOT Characters </h1>
+      {% for c in characters %}
+      <h2> Person </h2>
+      <ul>
+    	{% for k,v in c.items() %}
+        <li> {{k}}: {{v}}</li>
+	{% endfor %}
+	</ul>
+      <br>
+      {% endfor %}
+
+    </p>
+    
+    
+
+  </body>
+  
+</html>
+  
