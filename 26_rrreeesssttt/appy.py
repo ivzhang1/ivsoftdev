@@ -42,7 +42,7 @@ def meme():
 	stuff = urllib.request.urlopen(url, context=context) # GETS STUFF 
 	js = stuff.read() # gets info from urlopen
 	jason = json.loads(js) # loads into JSON
-	print(jason)
+	#print(jason)
 
 	return render_template("meme.html", _d = jason)
 
