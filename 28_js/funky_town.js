@@ -1,3 +1,8 @@
+//Ivan Zhang
+//SoftDev1 pd7
+//K #28: Sequential Progression
+//2018-12-18  
+
 var fibby = function (num){
     if(num == 0){
 	return 0;
