@@ -38,19 +38,19 @@ var printStudent = function() {
   var stu = randomStudent();
 	var p_tag = document.getElementById("randres");
 	p_tag.innerHTML = stu;
-  return stu;
+  console.log(stu);
 }
 var printgcd = function (){
   var num = gcd(5,10);
 	var p_tag = document.getElementById("gcdres");
 	p_tag.innerHTML = num;
-  return num;
+  console.log(num);
 }
 var printFib = function (){
   var num = fibby(10);
 	var p_tag = document.getElementById("fibres");
 	p_tag.innerHTML = num;
-	return num;
+	console.log(num);
 }
 
 
