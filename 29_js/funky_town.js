@@ -34,6 +34,19 @@ var fib = document.getElementById('fib');
 var gcD = document.getElementById('gcd');
 var randS = document.getElementById('randomStudent');
 
-fib.addEventListener('click', fibby);
-gcD.addEventListener('click', gcd);
-randS.addEventListener('click', randomStudent);
+var printStudent = function() {
+  var stu = randomStudent();
+  console.log(stu);
+}
+var printgcd = function (){
+  var num = gcd(5,10);
+  console.log(num);
+}
+var printFib = function (){
+  var num = fibby(5);
+  console.log(num);
+}
+
+fib.addEventListener('click', printFib);
+gcD.addEventListener('click', printgcd);
+randS.addEventListener('click', printStudent);
