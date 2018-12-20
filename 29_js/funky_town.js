@@ -26,7 +26,7 @@ var students = ["Sam", "Tom", "Bobby", "Smith"];
 
 var randomStudent = function (){
     var rand = Math.floor(Math.random() * 4);
-    console.log(students[rand]);
+    //console.log(students[rand]);
     return students[rand];
 }
 
@@ -43,7 +43,7 @@ var printgcd = function (){
   console.log(num);
 }
 var printFib = function (){
-  var num = fibby(5);
+  var num = fibby(10);
   console.log(num);
 }
 
