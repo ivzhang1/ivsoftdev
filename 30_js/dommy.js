@@ -24,7 +24,7 @@ list.addEventListener('click',function(e){
     e.target.remove(); // Removes list item based on clicks
 });
 
-var flist = [0,1]; / Dynamic programmmmmmmiinnnnggg!
+var flist = [0,1]; // Dynamic programmmmmmmiinnnnggg!
 var fibonacci = function(n) {
 
     if(n < flist.length) {
